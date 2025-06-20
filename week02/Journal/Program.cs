@@ -25,7 +25,10 @@ class Program
             Console.WriteLine("5. Quit");
             Console.Write("What would you like to do? ");
             int selection = int.Parse(Console.ReadLine());
-
+	    Console.WriteLine();
+	    // I guess we haven't gone over these in class yet, but they are exactly
+	    // the same as in Python pretty much and repeats having to make a ton
+	    // of if statements. Which I'd rather not do honestly.
             switch (selection)
             {
                 case 1:
@@ -46,15 +49,20 @@ class Program
                     myJournal.DisplayAll();
                     break;
                 case 3:
+		    Console.Write("What is the file name? ");
+		    string fileNameLoad = Console.ReadLine();
+
+		    myJournal.LoadFromFile(fileNameLoad);
                     break;
                 case 4:
-                    Console.Write("What is the fileName? ");
-                    string fileName = Console.ReadLine();
+                    Console.Write("What is the file name? ");
+                    string fileNameSave = Console.ReadLine();
 
-                    myJournal.SaveToFile(fileName);
+                    myJournal.SaveToFile(fileNameSave);
                     break;
 
                 // I found this explanation of exiting a program on c-sharpcorner.com
+		// This seems like the closest thing I can get to Python-like functionality
                 // https://www.c-sharpcorner.com/UploadFile/c713c3/how-to-exit-in-C-Sharp/
                 case 5:
                     System.Environment.Exit(0);

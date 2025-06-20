@@ -35,30 +35,25 @@ public class Journal
 	string[] lines = System.IO.File.ReadAllLines(file);
 
 
-	// I'm pretty sure we will need to use a delimeter here in order to capture the Date 
+	// I'm pretty sure we I need to use a delimeter here in order to capture the Date 
 	// variable and the Prompt variable appropriately. My idea is to use a delimeter of
-	// '- Prompt: ' so that we avoid any chance someone could type a '-' in their entry
-	// text and unknowingly break the program. For this purpose, we also need to use the 
+	// '- Prompt: ' so that I avoid any chance someone could type a '-' in their entry
+	// text and unknowingly break the program. For this purpose, I also need to use the 
 	// .Replace method on the strings to remove the 'Date: ' and '- Prompt: ' text
 	// from what will become the variables
-	//
+	// 
+	// I think this will work best and the code is so nice and concise.
 	// I found the .replace method here: https://learn.microsoft.com/en-us/dotnet/api/system.string.replace
-	foreach (string line in lines)
+	for (int i = 0; i < lines.Length; i += 2)
 	{
-		// startsWith: https://learn.microsoft.com/en-us/dotnet/api/system.string.startswith
-		if (line.StartsWith("Date: "))
-		{
-			string[] parts = line.Split(" - Prompt: ");
-			
-			e._date = parts[0].Replace("Date: ", "");
-			e._promptText = parts[1];
-		}
-		else
-		{
-			e._entryText = line;
-		}
+		Entry e = new Entry();
 
-		 
+		string[] entryPieces = lines[i].Split(" - Prompt: ");
+		e._date = entryPieces[0].Replace("Date: ", "");
+		e._promptText = entryPieces[1];
+		e._entryText = lines[i + 1];
+
+		_entries.Add(e);
 	}
     }
 }
