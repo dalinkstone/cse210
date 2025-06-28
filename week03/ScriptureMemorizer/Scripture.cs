@@ -17,18 +17,18 @@ public class Scripture
     public void HideRandomWords(int numberToHide)
     {
         Random randNumber = new Random();
-	
-	int wordsVisible = 0;
 
-	foreach (Word w in _words)
-	{
-		if (w.IsHidden() == false)
-		{
-			wordsVisible++;
-		}
-	}
+        int wordsVisible = 0;
 
-	int availableToHide = Math.Min(numberToHide, wordsVisible);
+        foreach (Word w in _words)
+        {
+            if (w.IsHidden() == false)
+            {
+                wordsVisible++;
+            }
+        }
+
+        int availableToHide = Math.Min(numberToHide, wordsVisible);
 
         for (int i = 0; i < availableToHide; i++)
         {
