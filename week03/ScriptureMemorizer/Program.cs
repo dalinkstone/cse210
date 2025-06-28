@@ -10,11 +10,24 @@ class Program
             "For God so loved the world, that He gave His only begotten Son, that whosoever believeth in Him should not perish, but have everlasting life."
         );
 
-        Console.Clear();
-        Console.Write(john.GetDisplayText());
-        Console.WriteLine(johnScripture.GetDisplayText());
+	Reference proverbs = new Reference("Proverbs", 3, 5, 6);
+	Scripture proverbsScripture = new Scripture(proverbs, "Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.");
 
-        while (johnScripture.IsCompletelyHidden() == false)
+	List<Scripture> scriptureList = new List<Scripture> { johnScripture, proverbsScripture }; 
+	Random randomNumber = new Random();
+	int randomScripture = randomNumber.Next(scriptureList.Count);
+
+	List<Reference> referenceList = new List<Reference> { john, proverbs };
+	int randomReference = randomNumber.Next(referenceList.Count);
+
+	Scripture scripture = scriptureList[randomScripture];
+	Reference reference = referenceList[randomReference];
+
+        Console.Clear();
+        Console.Write(reference.GetDisplayText());
+        Console.WriteLine(scripture.GetDisplayText());
+
+        while (scripture.IsCompletelyHidden() == false)
         {
             Console.WriteLine("Press enter to hide a word or type 'quit' to exit");
 
@@ -25,10 +38,10 @@ class Program
                 return;
             }
 
-            johnScripture.HideRandomWords(2);
+            scripture.HideRandomWords(2);
             Console.Clear();
-            Console.Write(john.GetDisplayText());
-            Console.WriteLine(johnScripture.GetDisplayText());
+            Console.Write(reference.GetDisplayText());
+            Console.WriteLine(scripture.GetDisplayText());
         }
     	Console.ReadKey();
     }
