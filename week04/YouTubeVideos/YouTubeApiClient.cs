@@ -25,8 +25,8 @@ public class YouTubeApiClient
     private string BuildUrl(string endpoint, Dictionary<string, string> parameters)
     {
         string query = "";
-        
-	foreach (string item in parameters)
+
+        foreach (string item in parameters)
         {
             query += item.key + "=" + item.value + "&";
         }
@@ -34,5 +34,14 @@ public class YouTubeApiClient
         return _baseUrl + endpoint + "?" + query;
     }
 
+    private string CallApi(string endpoint, Dictionary<string, string> parameters)
+    {
+        string url = BuildUrl(endpoint, parameters);
 
+        HttpResponseMessage response = _httpClient.GetAsync(url).Result;
+
+        string json = response.Content.ReadAsStringAsync().Result;
+
+        return json;
+    }
 }
