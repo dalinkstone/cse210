@@ -26,6 +26,8 @@ public class YouTubeApiClient
     {
         string query = "";
 
+	parameters["key"] = _apiKey;
+
         foreach (string item in parameters)
         {
             query += item.key + "=" + item.value + "&";
@@ -44,4 +46,32 @@ public class YouTubeApiClient
 
         return json;
     }
+
+
+    public string GetSearchVideos(string searchQuery)
+    {
+		var parameters = new Dictionary<string, string>
+		{
+			["part"] = "snippet";	
+			["q"] = searchQuery;
+			["type"] = "video";
+			["maxResults"] = "5";
+		};
+
+		string response = CallApi("search", parameters);
+
+		return JsonSerializer.Deserialize<string>(json);
+
+    }
+
+    public string GetVideo(string videoId)
+    {
+
+    }
+
+    public string GetComment(string videoId)
+    {
+
+    }
+
 }
