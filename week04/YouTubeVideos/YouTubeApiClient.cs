@@ -61,16 +61,33 @@ public class YouTubeApiClient
 		string response = CallApi("search", parameters);
 
 		return JsonSerializer.Deserialize<string>(json);
-
     }
 
-    public string GetVideo(string videoId)
+    public string GetVideo(List<string> videoIds)
     {
+	    var parameters = new Dictionary<string, string>
+	    {
+		    ["part"] = "snippet,statistics,contentDetails";
+		    ["id"] = string.Join(",", videoIds);
+	    };
 
+	    string response = CallApi("videos", parameters);
+
+	    return JsonSerializer.Deserialize<string>(json);
     }
 
     public string GetComment(string videoId)
     {
+	    var parameters = new Dictionary<string, string>
+	    {
+		["part"] = "snippet";
+		["videoId"] = videoId;
+		["maxResults"] = "5";
+	    };
+
+	    string response = CallApi("commentThreads", parameters);
+
+	    return JsonSerializer.Deserialize<string>(json);
 
     }
 
