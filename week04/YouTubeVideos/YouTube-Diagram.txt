@@ -1,0 +1,35 @@
+i
+@startuml
+
+class Video{
+
+- _title : string
+- _author : string
+- _lengthSeconds : int
+- _comments : List<Comment>
+
++ Video(title : string, author : string, lengthSeconds : int)
+
+
++ GetComments(comments : List<Comment>) : int
+
++ Display() : void
+
+}
+
+class Videos{
+- _videos : List<Video>
++ DisplayAll() : void
+
+}
+
+class Comment{
+
+- _commentAuthor : string
+- _content : string
+
++ Display() : void
+
+}
+
+@enduml

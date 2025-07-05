@@ -1,5 +1,8 @@
 using System;
 using System.Net.Http;
+using System.Collections.Generic;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 // to get 5 videos
 // https://www.googleapis.com/youtube/v3/search?part=snippet&q=YOUR_SEARCH_QUERY&type=video&maxResults=5&key=YOUR_API_KEY
@@ -28,7 +31,7 @@ public class YouTubeApiClient
 
 	parameters["key"] = _apiKey;
 
-        foreach (string item in parameters)
+        foreach (KeyValuePair<string, string> item in parameters)
         {
             query += item.key + "=" + item.value + "&";
         }
@@ -52,15 +55,15 @@ public class YouTubeApiClient
     {
 		var parameters = new Dictionary<string, string>
 		{
-			["part"] = "snippet";	
-			["q"] = searchQuery;
-			["type"] = "video";
-			["maxResults"] = "5";
+			["part"] = "snippet",
+			["q"] = searchQuery,
+			["type"] = "video",
+			["maxResults"] = "5",
 		};
 
 		string response = CallApi("search", parameters);
 
-		return JsonSerializer.Deserialize<string>(json);
+		return JsonSerializer.Deserialize<string>(response);
     }
 
     public string GetVideo(List<string> videoIds)
@@ -73,21 +76,21 @@ public class YouTubeApiClient
 
 	    string response = CallApi("videos", parameters);
 
-	    return JsonSerializer.Deserialize<string>(json);
+	    return JsonSerializer.Deserialize<string>(response);
     }
 
     public string GetComment(string videoId)
     {
 	    var parameters = new Dictionary<string, string>
 	    {
-		["part"] = "snippet";
-		["videoId"] = videoId;
-		["maxResults"] = "5";
+		["part"] = "snippet",
+		["videoId"] = videoId,
+		["maxResults"] = "5",
 	    };
 
 	    string response = CallApi("commentThreads", parameters);
 
-	    return JsonSerializer.Deserialize<string>(json);
+	    return JsonSerializer.Deserialize<string>(response);
 
     }
 
