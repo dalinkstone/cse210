@@ -1,0 +1,15 @@
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/obj/Debug/net8.0/ScriptureMemorizer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/obj/Debug/net8.0/ScriptureMemorizer.AssemblyInfoInputs.cache
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/obj/Debug/net8.0/ScriptureMemorizer.AssemblyInfo.cs
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/obj/Debug/net8.0/ScriptureMemorizer.csproj.CoreCompileInputs.cache
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/obj/Debug/net8.0/ScriptureMemorizer.sourcelink.json
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/bin/Debug/net8.0/ScriptureMemorizer
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/bin/Debug/net8.0/ScriptureMemorizer.deps.json
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/bin/Debug/net8.0/ScriptureMemorizer.runtimeconfig.json
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/bin/Debug/net8.0/ScriptureMemorizer.dll
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/bin/Debug/net8.0/ScriptureMemorizer.pdb
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/obj/Debug/net8.0/ScriptureMemorizer.dll
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/obj/Debug/net8.0/refint/ScriptureMemorizer.dll
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/obj/Debug/net8.0/ScriptureMemorizer.pdb
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/obj/Debug/net8.0/ScriptureMemorizer.genruntimeconfig.cache
+/Users/dal/schoolwork/cse210/week03/ScriptureMemorizer/obj/Debug/net8.0/ref/ScriptureMemorizer.dll

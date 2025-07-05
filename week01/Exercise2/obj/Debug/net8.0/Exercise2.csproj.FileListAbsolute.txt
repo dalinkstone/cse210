@@ -1,0 +1,15 @@
+/Users/dal/schoolwork/cse210/week01/Exercise2/obj/Debug/net8.0/Exercise2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dal/schoolwork/cse210/week01/Exercise2/obj/Debug/net8.0/Exercise2.AssemblyInfoInputs.cache
+/Users/dal/schoolwork/cse210/week01/Exercise2/obj/Debug/net8.0/Exercise2.AssemblyInfo.cs
+/Users/dal/schoolwork/cse210/week01/Exercise2/obj/Debug/net8.0/Exercise2.csproj.CoreCompileInputs.cache
+/Users/dal/schoolwork/cse210/week01/Exercise2/obj/Debug/net8.0/Exercise2.sourcelink.json
+/Users/dal/schoolwork/cse210/week01/Exercise2/bin/Debug/net8.0/Exercise2
+/Users/dal/schoolwork/cse210/week01/Exercise2/bin/Debug/net8.0/Exercise2.deps.json
+/Users/dal/schoolwork/cse210/week01/Exercise2/bin/Debug/net8.0/Exercise2.runtimeconfig.json
+/Users/dal/schoolwork/cse210/week01/Exercise2/bin/Debug/net8.0/Exercise2.dll
+/Users/dal/schoolwork/cse210/week01/Exercise2/bin/Debug/net8.0/Exercise2.pdb
+/Users/dal/schoolwork/cse210/week01/Exercise2/obj/Debug/net8.0/Exercise2.dll
+/Users/dal/schoolwork/cse210/week01/Exercise2/obj/Debug/net8.0/refint/Exercise2.dll
+/Users/dal/schoolwork/cse210/week01/Exercise2/obj/Debug/net8.0/Exercise2.pdb
+/Users/dal/schoolwork/cse210/week01/Exercise2/obj/Debug/net8.0/Exercise2.genruntimeconfig.cache
+/Users/dal/schoolwork/cse210/week01/Exercise2/obj/Debug/net8.0/ref/Exercise2.dll

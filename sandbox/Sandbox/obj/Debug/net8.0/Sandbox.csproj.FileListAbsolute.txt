@@ -1,0 +1,15 @@
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/bin/Debug/net8.0/Sandbox
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/bin/Debug/net8.0/Sandbox.deps.json
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/bin/Debug/net8.0/Sandbox.runtimeconfig.json
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/bin/Debug/net8.0/Sandbox.dll
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/bin/Debug/net8.0/Sandbox.pdb
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/obj/Debug/net8.0/Sandbox.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/obj/Debug/net8.0/Sandbox.AssemblyInfoInputs.cache
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/obj/Debug/net8.0/Sandbox.AssemblyInfo.cs
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/obj/Debug/net8.0/Sandbox.csproj.CoreCompileInputs.cache
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/obj/Debug/net8.0/Sandbox.sourcelink.json
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/obj/Debug/net8.0/Sandbox.dll
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/obj/Debug/net8.0/refint/Sandbox.dll
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/obj/Debug/net8.0/Sandbox.pdb
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/obj/Debug/net8.0/Sandbox.genruntimeconfig.cache
+/Users/dal/schoolwork/cse210/sandbox/Sandbox/obj/Debug/net8.0/ref/Sandbox.dll

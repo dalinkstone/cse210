@@ -1,0 +1,15 @@
+/Users/dal/schoolwork/cse210/week02/Resumes/bin/Debug/net8.0/Resumes
+/Users/dal/schoolwork/cse210/week02/Resumes/bin/Debug/net8.0/Resumes.deps.json
+/Users/dal/schoolwork/cse210/week02/Resumes/bin/Debug/net8.0/Resumes.runtimeconfig.json
+/Users/dal/schoolwork/cse210/week02/Resumes/bin/Debug/net8.0/Resumes.dll
+/Users/dal/schoolwork/cse210/week02/Resumes/bin/Debug/net8.0/Resumes.pdb
+/Users/dal/schoolwork/cse210/week02/Resumes/obj/Debug/net8.0/Resumes.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dal/schoolwork/cse210/week02/Resumes/obj/Debug/net8.0/Resumes.AssemblyInfoInputs.cache
+/Users/dal/schoolwork/cse210/week02/Resumes/obj/Debug/net8.0/Resumes.AssemblyInfo.cs
+/Users/dal/schoolwork/cse210/week02/Resumes/obj/Debug/net8.0/Resumes.csproj.CoreCompileInputs.cache
+/Users/dal/schoolwork/cse210/week02/Resumes/obj/Debug/net8.0/Resumes.sourcelink.json
+/Users/dal/schoolwork/cse210/week02/Resumes/obj/Debug/net8.0/Resumes.dll
+/Users/dal/schoolwork/cse210/week02/Resumes/obj/Debug/net8.0/refint/Resumes.dll
+/Users/dal/schoolwork/cse210/week02/Resumes/obj/Debug/net8.0/Resumes.pdb
+/Users/dal/schoolwork/cse210/week02/Resumes/obj/Debug/net8.0/Resumes.genruntimeconfig.cache
+/Users/dal/schoolwork/cse210/week02/Resumes/obj/Debug/net8.0/ref/Resumes.dll

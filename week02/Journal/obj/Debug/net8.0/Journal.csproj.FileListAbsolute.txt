@@ -1,0 +1,15 @@
+/Users/dal/schoolwork/cse210/week02/Journal/obj/Debug/net8.0/Journal.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dal/schoolwork/cse210/week02/Journal/obj/Debug/net8.0/Journal.AssemblyInfoInputs.cache
+/Users/dal/schoolwork/cse210/week02/Journal/obj/Debug/net8.0/Journal.AssemblyInfo.cs
+/Users/dal/schoolwork/cse210/week02/Journal/obj/Debug/net8.0/Journal.csproj.CoreCompileInputs.cache
+/Users/dal/schoolwork/cse210/week02/Journal/obj/Debug/net8.0/Journal.sourcelink.json
+/Users/dal/schoolwork/cse210/week02/Journal/bin/Debug/net8.0/Journal
+/Users/dal/schoolwork/cse210/week02/Journal/bin/Debug/net8.0/Journal.deps.json
+/Users/dal/schoolwork/cse210/week02/Journal/bin/Debug/net8.0/Journal.runtimeconfig.json
+/Users/dal/schoolwork/cse210/week02/Journal/bin/Debug/net8.0/Journal.dll
+/Users/dal/schoolwork/cse210/week02/Journal/bin/Debug/net8.0/Journal.pdb
+/Users/dal/schoolwork/cse210/week02/Journal/obj/Debug/net8.0/Journal.dll
+/Users/dal/schoolwork/cse210/week02/Journal/obj/Debug/net8.0/refint/Journal.dll
+/Users/dal/schoolwork/cse210/week02/Journal/obj/Debug/net8.0/Journal.pdb
+/Users/dal/schoolwork/cse210/week02/Journal/obj/Debug/net8.0/Journal.genruntimeconfig.cache
+/Users/dal/schoolwork/cse210/week02/Journal/obj/Debug/net8.0/ref/Journal.dll
