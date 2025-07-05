@@ -1,0 +1,65 @@
+@startuml
+
+class Product{
+- _id : int
+- _name : string
+- _price : int
+- _quantity : int
+
++ Product(id : int, name : string, price : int, quantity : int)
+
++ GetProductName() : string
++ GetProductPrice() : int
++ GetProductQuantity() : int 
+
++ TotalCost(price : int, quantity : int) : int
+
++ Display() : void
+
+}
+
+class Customer{
+- _name : string
+- _address : Address
+
++ Customer(name : string, address : Address)
+
+
+
++ IsCustomerUSA(address : Address) : bool
+
+}
+
+class Address{
+- _street : string
+- _city : string
+- _state: string
+- _country : string
+
++ Address(street : string, city : string, state : string, country : string)
+
++ GetAddress() : string
+
++ IsUSA(country : string) : bool
++ Display() : void
+
+}
+
+class Order{
+- _products : List<Product>
+- _customer : Customer
+
++ Order(products : List<Product>, customer : Customer)
+
++ TotalPrice(products : List<Product>, shippingCost : int) : int
++ ShippingCost(customer : Customer) : int
+
++ GetPackagingLabel(products : List<Product>) : string
++ GetShippingLabel(customer : Customer) : string
+
++ Display() : void
+
+}
+
+@enduml
+

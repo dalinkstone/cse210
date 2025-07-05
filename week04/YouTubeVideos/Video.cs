@@ -9,7 +9,7 @@ public class Video
     private int _length;
     private List<Comment> _comments = new List<Comment>();
 
-    public Video(string id, string title, string author, string length) 
+    public Video(string id, string title, string author, int length) 
     {
 	    _id = id;
 	    _title = title;

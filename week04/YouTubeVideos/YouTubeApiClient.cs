@@ -29,7 +29,7 @@ public class YouTubeApiClient
     {
         string query = "";
 
-	parameters["key"] = _apiKey;
+        parameters["key"] = _apiKey;
 
         foreach (KeyValuePair<string, string> item in parameters)
         {
@@ -51,47 +51,86 @@ public class YouTubeApiClient
     }
 
 
-    public string GetSearchVideos(string searchQuery)
+    public string GetSearchVideos()
     {
-		var parameters = new Dictionary<string, string>
-		{
-			["part"] = "snippet",
-			["q"] = searchQuery,
-			["type"] = "video",
-			["maxResults"] = "5",
-		};
+        var parameters = new Dictionary<string, string>
+        {
+            ["part"] = "snippet",
+            ["q"] = "programming",
+            ["type"] = "video",
+            ["maxResults"] = "5",
+        };
 
-		string response = CallApi("search", parameters);
+        string response = CallApi("search", parameters);
 
-		return JsonSerializer.Deserialize<string>(response);
+        return JsonSerializer.Deserialize<string>(response);
     }
 
-    public string GetVideo(List<string> videoIds)
+    private Video GetVideo(string videoId)
     {
-	    var parameters = new Dictionary<string, string>
-	    {
-		    ["part"] = "snippet,statistics,contentDetails";
-		    ["id"] = string.Join(",", videoIds);
-	    };
+        var parameters = new Dictionary<string, string>
+        {
+            ["part"] = "snippet,statistics,contentDetails",
+            ["id"] = videoId,
+        };
 
-	    string response = CallApi("videos", parameters);
+        string response = CallApi("videos", parameters);
 
-	    return JsonSerializer.Deserialize<string>(response);
+        // return JsonSerializer.Deserialize<string>(response);
+
+        string videoTitle = "";
+        string videoAuthor = "";
+        int videoLength = ;
+
+        Video newVideo = Video(videoId, videoTitle, videoAuthor, videoLength);
+
+        return newVideo;
     }
 
-    public string GetComment(string videoId)
+    public List<Video> GetVideos(List<string> videoIds)
     {
-	    var parameters = new Dictionary<string, string>
-	    {
-		["part"] = "snippet",
-		["videoId"] = videoId,
-		["maxResults"] = "5",
-	    };
+        List<Video> videos = new List<Video>();
 
-	    string response = CallApi("commentThreads", parameters);
+        foreach (string videoId: videoIds)
+	{
+            videos += GetVideo(videoId);
+        }
 
-	    return JsonSerializer.Deserialize<string>(response);
+        return videos;
+    }
 
+    private Comment GetComment(string videoId)
+    {
+        var parameters = new Dictionary<string, string>
+        {
+            ["part"] = "snippet",
+            ["videoId"] = videoId,
+            ["maxResults"] = "5",
+        };
+
+        string response = CallApi("commentThreads", parameters);
+
+        // return JsonSerializer.Deserialize<string>(response);
+
+        string commentId = "";
+        string commentAuthor = "";
+        string commentContent = "";
+
+        Comment newComment = Comment(commentId, commentAuthor, commentContent);
+
+        return newComment;
+    }
+
+    public List<Comment> GetComments(List<string> videoIds)
+    {
+        List<Comment> comments = new List<Comment>();
+
+        foreach (string videoId: videoIds)
+	{
+
+        }
+
+        return comments;
     }
 
 }
