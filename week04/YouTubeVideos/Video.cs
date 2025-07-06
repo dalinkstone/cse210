@@ -24,7 +24,7 @@ public class Video
 
     public void DisplayVideo()
     {
-        Console.WriteLine($"\n{_title}: {_author} - {_length} - # of Comments: {CountComments()}");
+        Console.WriteLine($"\n{_id} - {_title}: {_author} - {_length} - # of Comments: {CountComments()}");
     }
 
     public int CountComments()

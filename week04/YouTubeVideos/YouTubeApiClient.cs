@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 // to get 5 videos
@@ -114,13 +115,43 @@ public class YouTubeApiClient
             .GetProperty("duration")
             .GetString();
 
-        int videoLength = 0;
-        if (duration.Contains("M"))
+        // yes, of course i used a regex converter. i like regex101
+        var regex = new Regex(@"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?");
+        var match = regex.Match(duration);
+
+        // okay so this code is probably going to hurt your eyes and i get that, but i haven't really used
+        // ternary operators too much and i would shorten these by using ternary. this gets the job done though
+        int hours;
+        if (match.Groups[1].Success)
         {
-            // im actually not sure if this is the best way to do it and i couldn't find any simpler way, so i'm hoping you have
-            // some insight into the parse method
-            videoLength = int.Parse(duration.Split('M')[0].Replace("PT", "")) * 60;
+            hours = int.Parse(match.Groups[1].Value);
         }
+        else
+        {
+            hours = 0;
+        }
+
+        int minutes;
+        if (match.Groups[2].Success)
+        {
+            minutes = int.Parse(match.Groups[2].Value);
+        }
+        else
+        {
+            minutes = 0;
+        }
+
+        int seconds;
+        if (match.Groups[3].Success)
+        {
+            seconds = int.Parse(match.Groups[3].Value);
+        }
+        else
+        {
+            seconds = 0;
+        }
+
+        int videoLength = (hours * 3600) + (minutes * 60) + seconds;
 
         Video newVideo = new Video(videoId, videoTitle, videoAuthor, videoLength);
 
@@ -149,12 +180,6 @@ public class YouTubeApiClient
         };
 
         string response = CallApi("commentThreads", parameters);
-
-        // i hope you read this comment because writing these 3 methods was kind of painful
-        // to start, i hate complexity and modularization, grugbrain.dev is a great example of why
-        // there is virtually no reason to keep breaking things down into smaller pieces
-        // i was thinking this gets a good middle, while also showing good abstraction and encapsulation, but now
-        // i am kind of questioning it. oh well.
 
         return ParseComments(response);
     }
