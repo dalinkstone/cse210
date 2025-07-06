@@ -6,8 +6,8 @@ public class Customer
     public Customer(string name, Address address)
     {
         _name = name;
-	_address = address;
-   }
+        _address = address;
+    }
 
     public bool IsCustomerUSA(Address address)
     {
@@ -31,7 +31,8 @@ public class Customer
 
     public void Display()
     {
-        Console.WriteLine($"Customer Name: {GetName()} - Customer Address: {_address.GetAddress()}");
+        Console.WriteLine(
+            $"Customer Name: {GetName()} - Customer Address: {_address.GetAddress()}"
+        );
     }
-
 }

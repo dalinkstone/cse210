@@ -45,13 +45,13 @@ public class Order
 
     public string GetShippingLabel(Customer customer)
     {
-    	return $"Customer Name: {_customer.GetName()} - Customer Address: {_customer.GetCustomerAddress().GetAddress()}";
+        return $"Customer Name: {_customer.GetName()} - Customer Address: {_customer.GetCustomerAddress().GetAddress()}";
     }
 
     public void Display()
     {
-	Console.WriteLine(GetShippingLabel(_customer));
-	Console.WriteLine(GetPackagingLabel(_products));
-	Console.WriteLine($"Total Price: ${TotalPrice(_products, ShippingCost(_customer))}\n");
+        Console.WriteLine(GetShippingLabel(_customer));
+        Console.WriteLine(GetPackagingLabel(_products));
+        Console.WriteLine($"Total Price: ${TotalPrice(_products, ShippingCost(_customer))}\n");
     }
 }
