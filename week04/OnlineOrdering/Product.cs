@@ -5,14 +5,20 @@ public class Product
     private int _price;
     private int _quantity;
 
-    public Product(int id, string name, int price, int quantity) { }
+    public Product(int id, string name, int price, int quantity) 
+    {
+	_id = id;
+	_name = name;
+	_price = price;
+	_quantity = quantity;
+    }
 
     public string GetProductName()
     {
         return _name;
     }
 
-    public string GetProductId()
+    public int GetProductId()
     {
         return _id;
     }
