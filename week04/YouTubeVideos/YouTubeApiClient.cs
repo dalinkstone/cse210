@@ -119,39 +119,28 @@ public class YouTubeApiClient
         var regex = new Regex(@"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?");
         var match = regex.Match(duration);
 
+	int hours = 0;
+	int minutes = 0;
+	int seconds = 0;
+
         // okay so this code is probably going to hurt your eyes and i get that, but i haven't really used
         // ternary operators too much and i would shorten these by using ternary. this gets the job done though
-        int hours;
         if (match.Groups[1].Success)
         {
             hours = int.Parse(match.Groups[1].Value);
         }
-        else
-        {
-            hours = 0;
-        }
 
-        int minutes;
         if (match.Groups[2].Success)
         {
             minutes = int.Parse(match.Groups[2].Value);
-        }
-        else
-        {
-            minutes = 0;
-        }
+	}
 
-        int seconds;
         if (match.Groups[3].Success)
         {
             seconds = int.Parse(match.Groups[3].Value);
         }
-        else
-        {
-            seconds = 0;
-        }
 
-        int videoLength = (hours * 3600) + (minutes * 60) + seconds;
+	int videoLength = (hours * 3600) + (minutes * 60) + seconds;
 
         Video newVideo = new Video(videoId, videoTitle, videoAuthor, videoLength);
 
