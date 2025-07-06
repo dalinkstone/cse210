@@ -24,8 +24,6 @@ class Customer{
 
 + Customer(name : string, address : Address)
 
-
-
 + IsCustomerUSA(address : Address) : bool
 
 }
@@ -51,8 +49,8 @@ class Order{
 
 + Order(products : List<Product>, customer : Customer)
 
-+ TotalPrice(products : List<Product>, shippingCost : int) : int
-+ ShippingCost(customer : Customer) : int
++ TotalPrice(products : List<Product>) : int
+- ShippingCost(customer : Customer) : int
 
 + GetPackagingLabel(products : List<Product>) : string
 + GetShippingLabel(customer : Customer) : string
