@@ -13,6 +13,11 @@ public class Address
         _country = country;
     }
 
+    public string GetCountry()
+    {
+        return _country;
+    }
+
     public string GetAddress()
     {
         return $"{_street}, {_city}, {_state} {_country}";

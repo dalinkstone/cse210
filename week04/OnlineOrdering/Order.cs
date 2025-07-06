@@ -11,7 +11,7 @@ public class Order
 
     private int ShippingCost(Customer customer)
     {
-        if (customer.IsCustomerUSA() == true)
+        if (customer.IsCustomerUSA(_customer.GetCustomerAddress()) == true)
         {
             return 5;
         }
@@ -26,10 +26,10 @@ public class Order
         int price = 0;
         foreach (Product product in products)
         {
-            price += product.TotalCost(product.GetProductPrice(), product.GetProductQuantity()) + ShippingCost(_customer);
+            price += product.TotalCost(product.GetProductPrice(), product.GetProductQuantity());
         }
 
-        return price;
+        return price + ShippingCost(_customer);
     }
 
     public string GetPackagingLabel(List<Product> products)
@@ -45,13 +45,13 @@ public class Order
 
     public string GetShippingLabel(Customer customer)
     {
-        return $"Customer Name: {customer.GetName()}\n Customer Address: {customer.GetAddress()}";
+    	return $"Customer Name: {_customer.GetName()} - Customer Address: {_customer.GetCustomerAddress().GetAddress()}";
     }
 
     public void Display()
     {
-	Console.WriteLine(GetShippingLabel());
-	Console.WriteLine(GetPackagingLabel());
-	Console.WriteLine($"Total Price: ${TotalPrice(_products, ShippingCost())}\n");
+	Console.WriteLine(GetShippingLabel(_customer));
+	Console.WriteLine(GetPackagingLabel(_products));
+	Console.WriteLine($"Total Price: ${TotalPrice(_products, ShippingCost(_customer))}\n");
     }
 }

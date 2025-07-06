@@ -1,0 +1,15 @@
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/obj/Debug/net8.0/OnlineOrdering.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/obj/Debug/net8.0/OnlineOrdering.AssemblyInfoInputs.cache
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/obj/Debug/net8.0/OnlineOrdering.AssemblyInfo.cs
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/obj/Debug/net8.0/OnlineOrdering.csproj.CoreCompileInputs.cache
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/obj/Debug/net8.0/OnlineOrdering.sourcelink.json
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/bin/Debug/net8.0/OnlineOrdering
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/bin/Debug/net8.0/OnlineOrdering.deps.json
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/bin/Debug/net8.0/OnlineOrdering.runtimeconfig.json
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/bin/Debug/net8.0/OnlineOrdering.dll
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/bin/Debug/net8.0/OnlineOrdering.pdb
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/obj/Debug/net8.0/OnlineOrdering.dll
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/obj/Debug/net8.0/refint/OnlineOrdering.dll
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/obj/Debug/net8.0/OnlineOrdering.pdb
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/obj/Debug/net8.0/OnlineOrdering.genruntimeconfig.cache
+/Users/dal/schoolwork/cse210/week04/OnlineOrdering/obj/Debug/net8.0/ref/OnlineOrdering.dll

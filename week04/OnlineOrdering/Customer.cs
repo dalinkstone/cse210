@@ -11,7 +11,7 @@ public class Customer
 
     public bool IsCustomerUSA(Address address)
     {
-        if (address.IsUSA() == true)
+        if (address.IsUSA(address.GetCountry()) == true)
         {
             return true;
         }
@@ -24,14 +24,14 @@ public class Customer
         return _name;
     }
 
-    public Address GetAddress()
+    public Address GetCustomerAddress()
     {
         return _address;
     }
 
     public void Display()
     {
-        Console.WriteLine($"Customer Name: {GetName()}");
+        Console.WriteLine($"Customer Name: {GetName()} - Customer Address: {_address.GetAddress()}");
     }
 
 }

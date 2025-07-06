@@ -17,7 +17,7 @@ class Program
 		shoes,
 		bike,
 		headphones,
-	}
+	};
 
 	Customer david = new Customer("David", davidAddress);	
 	Customer darla = new Customer("Darla", darlaAddress);
