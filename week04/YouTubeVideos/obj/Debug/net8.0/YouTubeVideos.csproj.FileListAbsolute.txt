@@ -1,0 +1,15 @@
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/bin/Debug/net8.0/YouTubeVideos
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/bin/Debug/net8.0/YouTubeVideos.deps.json
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/bin/Debug/net8.0/YouTubeVideos.runtimeconfig.json
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/bin/Debug/net8.0/YouTubeVideos.dll
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/bin/Debug/net8.0/YouTubeVideos.pdb
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/obj/Debug/net8.0/YouTubeVideos.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/obj/Debug/net8.0/YouTubeVideos.AssemblyInfoInputs.cache
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/obj/Debug/net8.0/YouTubeVideos.AssemblyInfo.cs
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/obj/Debug/net8.0/YouTubeVideos.csproj.CoreCompileInputs.cache
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/obj/Debug/net8.0/YouTubeVideos.sourcelink.json
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/obj/Debug/net8.0/YouTubeVideos.dll
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/obj/Debug/net8.0/refint/YouTubeVideos.dll
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/obj/Debug/net8.0/YouTubeVideos.pdb
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/obj/Debug/net8.0/YouTubeVideos.genruntimeconfig.cache
+/Users/dal/schoolwork/cse210/week04/YouTubeVideos/obj/Debug/net8.0/ref/YouTubeVideos.dll
