@@ -14,7 +14,7 @@ public class DataParser
     {
         foreach (Video video in _videos)
         {
-            Console.WriteLine()
+            Console.WriteLine();
             video.DisplayVideo();
             Console.WriteLine();
             video.DisplayComments();
