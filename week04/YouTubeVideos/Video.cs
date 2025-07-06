@@ -17,14 +17,14 @@ public class Video
 	    _length = length;
     }
 
-    public void SetComments(Comment comment)
+    public void SetComments(List<Comment> comments)
     {
-	    _comments.Add(comment);
+	    _comments = comments;
     }
 
     public void DisplayVideo()
     {
-        Console.WriteLine($"\n{_title}: {_author} - {_length} - # of Comments: {_commentCount}");
+        Console.WriteLine($"\n{_title}: {_author} - {_length} - # of Comments: {CountComments()}");
     }
 
     public int CountComments()
