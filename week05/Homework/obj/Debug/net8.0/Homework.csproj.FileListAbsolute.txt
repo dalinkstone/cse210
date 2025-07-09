@@ -1,0 +1,15 @@
+/Users/dal/schoolwork/cse210/week05/Homework/obj/Debug/net8.0/Homework.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dal/schoolwork/cse210/week05/Homework/obj/Debug/net8.0/Homework.AssemblyInfoInputs.cache
+/Users/dal/schoolwork/cse210/week05/Homework/obj/Debug/net8.0/Homework.AssemblyInfo.cs
+/Users/dal/schoolwork/cse210/week05/Homework/obj/Debug/net8.0/Homework.csproj.CoreCompileInputs.cache
+/Users/dal/schoolwork/cse210/week05/Homework/obj/Debug/net8.0/Homework.sourcelink.json
+/Users/dal/schoolwork/cse210/week05/Homework/bin/Debug/net8.0/Homework
+/Users/dal/schoolwork/cse210/week05/Homework/bin/Debug/net8.0/Homework.deps.json
+/Users/dal/schoolwork/cse210/week05/Homework/bin/Debug/net8.0/Homework.runtimeconfig.json
+/Users/dal/schoolwork/cse210/week05/Homework/bin/Debug/net8.0/Homework.dll
+/Users/dal/schoolwork/cse210/week05/Homework/bin/Debug/net8.0/Homework.pdb
+/Users/dal/schoolwork/cse210/week05/Homework/obj/Debug/net8.0/Homework.dll
+/Users/dal/schoolwork/cse210/week05/Homework/obj/Debug/net8.0/refint/Homework.dll
+/Users/dal/schoolwork/cse210/week05/Homework/obj/Debug/net8.0/Homework.pdb
+/Users/dal/schoolwork/cse210/week05/Homework/obj/Debug/net8.0/Homework.genruntimeconfig.cache
+/Users/dal/schoolwork/cse210/week05/Homework/obj/Debug/net8.0/ref/Homework.dll
