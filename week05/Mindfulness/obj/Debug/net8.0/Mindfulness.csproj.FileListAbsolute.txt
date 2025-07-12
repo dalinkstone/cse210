@@ -1,0 +1,5 @@
+/home/dal/cse210/week05/Mindfulness/obj/Debug/net8.0/Mindfulness.GeneratedMSBuildEditorConfig.editorconfig
+/home/dal/cse210/week05/Mindfulness/obj/Debug/net8.0/Mindfulness.AssemblyInfoInputs.cache
+/home/dal/cse210/week05/Mindfulness/obj/Debug/net8.0/Mindfulness.AssemblyInfo.cs
+/home/dal/cse210/week05/Mindfulness/obj/Debug/net8.0/Mindfulness.csproj.CoreCompileInputs.cache
+/home/dal/cse210/week05/Mindfulness/obj/Debug/net8.0/Mindfulness.sourcelink.json

@@ -20,4 +20,11 @@ public class Activity
 	{
 		_duration = duration;
 	}
+
+  public void DisplayStartingMessage()
+  {
+    Console.WriteLine($"Welcome to the {_name}");
+    Console.WriteLine();
+    Console.WriteLine(_description);
+  }
 }
