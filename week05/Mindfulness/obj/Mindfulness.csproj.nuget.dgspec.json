@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/dal/cse210/week05/Mindfulness/Mindfulness.csproj": {}
+    "/Users/dal/schoolwork/cse210/week05/Mindfulness/Mindfulness.csproj": {}
   },
   "projects": {
-    "/home/dal/cse210/week05/Mindfulness/Mindfulness.csproj": {
+    "/Users/dal/schoolwork/cse210/week05/Mindfulness/Mindfulness.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dal/cse210/week05/Mindfulness/Mindfulness.csproj",
+        "projectUniqueName": "/Users/dal/schoolwork/cse210/week05/Mindfulness/Mindfulness.csproj",
         "projectName": "Mindfulness",
-        "projectPath": "/home/dal/cse210/week05/Mindfulness/Mindfulness.csproj",
-        "packagesPath": "/home/dal/.nuget/packages/",
-        "outputPath": "/home/dal/cse210/week05/Mindfulness/obj/",
+        "projectPath": "/Users/dal/schoolwork/cse210/week05/Mindfulness/Mindfulness.csproj",
+        "packagesPath": "/Users/dal/.nuget/packages/",
+        "outputPath": "/Users/dal/schoolwork/cse210/week05/Mindfulness/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/dal/.nuget/NuGet/NuGet.Config"
+          "/Users/dal/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -58,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/dal/.local/share/mise/installs/dotnet/8.0.412/sdk/8.0.412/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.17/libexec/sdk/8.0.117/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
