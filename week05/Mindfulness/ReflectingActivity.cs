@@ -33,42 +33,41 @@ public class ReflectingActivity : Activity
         return _prompts[number];
     }
 
-    private void SetRandomNumber(int randomNum) 
+    private void SetRandomNumber(int randomNum)
     {
-	_pastNumber = randomNum;
+        _pastNumber = randomNum;
     }
 
     private string GetRandomQuestion()
     {
-        
-	int number = _randomGenerator.Next(0, _questions.Count);
-	
-	// finally a real application of recursion that makes sense in my brain
-	// despite this code not being super robust, i wanted an excuse to actually
-	// use recursion
-	if (number == _pastNumber)
-	{
-		return GetRandomQuestion();	
-	}
+        int number = _randomGenerator.Next(0, _questions.Count);
+
+        // finally a real application of recursion that makes sense in my brain
+        // despite this code not being super robust, i wanted an excuse to actually
+        // use recursion
+        if (number == _pastNumber)
+        {
+            return GetRandomQuestion();
+        }
 
         SetRandomNumber(number);
 
-	return _questions[number];
+        return _questions[number];
     }
 
-    public void DisplayPrompt()
+    private void DisplayPrompt()
     {
         Console.WriteLine("Consider the following prompt:");
 
         Console.WriteLine($"--- {GetRandomPrompt()} ---");
-	Console.WriteLine("\n");
+        Console.WriteLine("\n");
 
         Console.WriteLine("When you have something in mind, press enter to continue.");
     }
 
-    public void DisplayQuestions() 
+    private void DisplayQuestions()
     {
-	Console.Write(GetRandomQuestion());
+        Console.Write(GetRandomQuestion());
     }
 
     public void Run()
@@ -90,21 +89,23 @@ public class ReflectingActivity : Activity
             }
         }
 
-	Console.WriteLine("\n");
-	Console.WriteLine("Now Ponder on each of the following questions as they related to this experience.");
-	Console.Write("You may begin in: ");
-	ShowCountDown(5);
-	Console.Clear();
+        Console.WriteLine("\n");
+        Console.WriteLine(
+            "Now Ponder on each of the following questions as they related to this experience."
+        );
+        Console.Write("You may begin in: ");
+        ShowCountDown(5);
+        Console.Clear();
 
-	int cycles = duration / 15;
-	
-	for (int i = 0; i < cycles; i++)
-	{
-		DisplayQuestions();
-		ShowSpinner(15);
-	}
+        int cycles = duration / 15;
 
-	Console.WriteLine();
+        for (int i = 0; i < cycles; i++)
+        {
+            DisplayQuestions();
+            ShowSpinner(15);
+        }
+
+        Console.WriteLine();
 
         DisplayCongrats();
         ShowSpinner(5);
