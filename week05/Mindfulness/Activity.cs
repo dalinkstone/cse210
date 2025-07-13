@@ -5,10 +5,11 @@ public class Activity
     protected string _name;
     protected string _description;
     protected int _duration;
-    private List<string> _animation = new List<string>({"|", "/", "-", "\\", "|", "/", "-", "\\"});
+    private List<string> _animation = new List<string> { "|", "/", "-", "\\", "|", "/", "-", "\\" };
     private DateTime startTime;
     private DateTime endTime;
     private string s;
+    private int i;
 
     public Activity(string name, string description)
     {
@@ -18,7 +19,7 @@ public class Activity
 
     public string GetName()
     {
-	    return _name;
+        return _name;
     }
 
     public int GetDuration()
@@ -36,47 +37,58 @@ public class Activity
         Console.WriteLine($"Welcome to the {_name}");
         Console.WriteLine();
         Console.WriteLine(_description);
-	Console.WriteLine();
-	Console.Write("How long, in seconds, would you like for your session? ");
-	SetDuration(int.Parse(Console.ReadLine()));
+        Console.WriteLine();
+        Console.Write("How long, in seconds, would you like for your session? (Increments of 15 only) ");
+        SetDuration(int.Parse(Console.ReadLine()));
+    }
+
+    public void DisplayCongrats()
+    {
+        Console.WriteLine("Well Done!");
     }
 
     public void DisplayEndingMessage()
     {
-	    Console.WriteLine($"You have completed {GetDuration()} seconds of {GetName()}");
+        Console.WriteLine($"You have completed {GetDuration()} seconds of {GetName()}");
     }
 
     public void ShowSpinner(int seconds)
     {
-	startTime = DateTime.Now;
-	endTime = startTime.AddSeconds(seconds);
-	i = 0;
+        startTime = DateTime.Now;
+        endTime = startTime.AddSeconds(seconds);
+        i = 0;
 
-	while (DateTime.Now < endTime)
-	{
-		string s = _animation[i];
-		Console.Write(s);
-		Thread.Sleep(750);
-		Console.Write("\b \b");
-		i++;
-		
-		if (i >= _animation.Count)
-		{
-			i = 0;
-		}
-	}
+        while (DateTime.Now < endTime)
+        {
+            s = _animation[i];
+            Console.Write(s);
+            Thread.Sleep(500);
+            Console.Write("\b \b");
+            i++;
 
+            if (i >= _animation.Count)
+            {
+                i = 0;
+            }
+        }
+        Console.WriteLine();
     }
 
     public void ShowCountDown(int seconds)
     {
-	startTime = DateTime.Now;
-	endTime = startTime.AddSeconds(seconds);
-	i = 0;
-	
-	while (DateTime.Now < endTime)
-	{
+        startTime = DateTime.Now;
+        endTime = startTime.AddSeconds(seconds);
+        i = 0;
 
-	}
+        for (int i = seconds; i > 0; i--)
+        {
+            Console.Write(i);
+            Thread.Sleep(1000);
+
+            string replaceNumbers = new string('\b', i.ToString().Length);
+            Console.Write(replaceNumbers);
+            Console.Write(new string(' ', i.ToString().Length));
+            Console.Write(replaceNumbers);
+        }
     }
 }
