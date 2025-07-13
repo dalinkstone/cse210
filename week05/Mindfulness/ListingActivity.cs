@@ -39,9 +39,8 @@ public class ListingActivity : Activity
             string userInput = Console.ReadLine();
             userList.Add(userInput);
         }
-	
-	_count = userList.Count;
 
+        _count = userList.Count;
     }
 
     public void Run()
@@ -56,15 +55,15 @@ public class ListingActivity : Activity
         Console.Write("You May begin in: ");
 
         ShowCountDown(5);
-	Console.WriteLine();
+        Console.WriteLine();
 
         GetListFromUser(duration);
 
         Console.WriteLine();
 
-	Console.WriteLine($"You listed {_count} items!");
+        Console.WriteLine($"You listed {_count} items!");
 
-	Console.WriteLine();
+        Console.WriteLine();
 
         DisplayCongrats();
         ShowSpinner(5);

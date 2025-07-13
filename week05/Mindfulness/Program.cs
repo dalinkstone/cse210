@@ -29,7 +29,7 @@ class Program
                     breathingActivity.Run();
                     break;
                 case "2":
-		    Console.Clear();
+                    Console.Clear();
                     ReflectingActivity reflectingActivity = new ReflectingActivity(
                         "Reflecting Activity",
                         "his activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life."
@@ -37,7 +37,7 @@ class Program
                     reflectingActivity.Run();
                     break;
                 case "3":
-		    Console.Clear();
+                    Console.Clear();
                     ListingActivity listingActivity = new ListingActivity(
                         "Listing Activity",
                         "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area."
