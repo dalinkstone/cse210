@@ -1,0 +1,15 @@
+/Users/dal/schoolwork/cse210/week06/Shapes/obj/Debug/net8.0/Shapes.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dal/schoolwork/cse210/week06/Shapes/obj/Debug/net8.0/Shapes.AssemblyInfoInputs.cache
+/Users/dal/schoolwork/cse210/week06/Shapes/obj/Debug/net8.0/Shapes.AssemblyInfo.cs
+/Users/dal/schoolwork/cse210/week06/Shapes/obj/Debug/net8.0/Shapes.csproj.CoreCompileInputs.cache
+/Users/dal/schoolwork/cse210/week06/Shapes/obj/Debug/net8.0/Shapes.sourcelink.json
+/Users/dal/schoolwork/cse210/week06/Shapes/bin/Debug/net8.0/Shapes
+/Users/dal/schoolwork/cse210/week06/Shapes/bin/Debug/net8.0/Shapes.deps.json
+/Users/dal/schoolwork/cse210/week06/Shapes/bin/Debug/net8.0/Shapes.runtimeconfig.json
+/Users/dal/schoolwork/cse210/week06/Shapes/bin/Debug/net8.0/Shapes.dll
+/Users/dal/schoolwork/cse210/week06/Shapes/bin/Debug/net8.0/Shapes.pdb
+/Users/dal/schoolwork/cse210/week06/Shapes/obj/Debug/net8.0/Shapes.dll
+/Users/dal/schoolwork/cse210/week06/Shapes/obj/Debug/net8.0/refint/Shapes.dll
+/Users/dal/schoolwork/cse210/week06/Shapes/obj/Debug/net8.0/Shapes.pdb
+/Users/dal/schoolwork/cse210/week06/Shapes/obj/Debug/net8.0/Shapes.genruntimeconfig.cache
+/Users/dal/schoolwork/cse210/week06/Shapes/obj/Debug/net8.0/ref/Shapes.dll
