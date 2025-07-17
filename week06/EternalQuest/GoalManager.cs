@@ -4,10 +4,7 @@ public class GoalManager
     private int _score;
     private bool _isRunning;
 
-    public GoalManager()
-    {
-
-    }
+    public GoalManager() { }
 
     public void Start()
     {
@@ -57,7 +54,6 @@ public class GoalManager
 
                     break;
             }
-
         }
     }
 
@@ -66,13 +62,67 @@ public class GoalManager
         Console.WriteLine($"You have {_score} points.\n");
     }
 
-    public void ListGoalNames()
-    {
+    public void ListGoalNames() { }
 
-    }
+    public void ListGoalDetails() { }
 
-    public void ListGoalDetails()
+    private GoalParams CreateGoalType(string type)
     {
+        GoalParams goalParams;
+        string nameOfGoal;
+        string descriptionOfGoal;
+        string pointsOfGoal;
+        int targetOfGoal;
+        int bonusOfGoal;
+
+        switch (type)
+        {
+            case "1":
+            case "2":
+                Console.Write("What is the name of your goal? ");
+                nameOfGoal = Console.ReadLine();
+
+                Console.Write("What is a short description of the goal? ");
+                descriptionOfGoal = Console.ReadLine();
+
+                Console.Write("What is the amount of points associated with this goal? ");
+                pointsOfGoal = Console.ReadLine();
+
+                goalParams = new GoalParams(nameOfGoal, descriptionOfGoal, pointsOfGoal);
+
+                return goalParams;
+            case "3":
+
+                Console.Write("What is the name of your goal? ");
+                nameOfGoal = Console.ReadLine();
+
+                Console.Write("What is a short description of the goal? ");
+                descriptionOfGoal = Console.ReadLine();
+
+                Console.Write("What is the amount of points associated with this goal? ");
+                pointsOfGoal = Console.ReadLine();
+
+                Console.Write(
+                    "How many times does this goal need to be accomplished for a bonus? "
+                );
+                targetOfGoal = int.Parse(Console.ReadLine());
+
+                Console.Write("What is the bonus for accomplishing this goal that many times? ");
+                bonusOfGoal = int.Parse(Console.ReadLine());
+
+                goalParams = new GoalParams(
+                    nameOfGoal,
+                    descriptionOfGoal,
+                    pointsOfGoal,
+                    targetOfGoal,
+                    bonusOfGoal
+                );
+
+                return goalParams;
+	   default:
+		Console.WriteLine("That is not a valid goal type.");
+		throw new ArgumentException("Invalid goal type");
+        }
 
     }
 
@@ -86,46 +136,50 @@ public class GoalManager
         Console.Write("Which type of goal would you like to create? ");
         string typeOfGoal = Console.ReadLine();
 
-        Console.Write("What is the name of your goal? ");
-        string nameOfGoal = Console.ReadLine();
-
-        Console.Write("What is a short description of the goal? ");
-        string descriptionOfGoal = Console.ReadLine();
-
-        Console.Write("What is the amount of points associated with this goal? ");
-        string pointsOfGoal = Console.ReadLine();
-
         Goal newGoal;
 
         switch (typeOfGoal)
         {
             case "1":
-                newGoal = SimpleGoal(nameOfGoal, descriptionOfGoal, pointsOfGoal);
+                // i know that what i am doing here is not necessarily best practice
+                // if i could do this again i would create a class for the input
+                // so that it is strongly typed and then i can call the attributes
+                // but having to write another class makes me struggle with
+                // the line between good DRY and abstraction vs. complexity demon
+                GoalParams simpleParams = CreateGoalType(typeOfGoal);
+                newGoal = new SimpleGoal(
+                    simpleParams.Name,
+                    simpleParams.Description,
+                    simpleParams.Points
+                );
+                _goals.Add(newGoal);
                 break;
             case "2":
-                newGoal = EternalGoal(nameOfGoal, descriptionOfGoal, pointsOfGoal);
+                GoalParams eternalParams = CreateGoalType(typeOfGoal);
+                newGoal = new EternalGoal(
+                    eternalParams.Name,
+                    eternalParams.Description,
+                    eternalParams.Points
+                );
+                _goals.Add(newGoal);
                 break;
             case "3":
-                newGoal = ChecklistGoal(nameOfGoal, descriptionOfGoal, pointsOfGoal);
+                GoalParams checklistParams = CreateGoalType(typeOfGoal);
+                newGoal = new ChecklistGoal(
+                    checklistParams.Name,
+                    checklistParams.Description,
+                    checklistParams.Points,
+                    checklistParams.Target,
+                    checklistParams.Bonus
+                );
+                _goals.Add(newGoal);
                 break;
-
         }
-
-        _goals.Add(newGoal);
     }
 
-    public void RecordEvent()
-    {
+    public void RecordEvent() { }
 
-    }
+    public void SaveGoals() { }
 
-    public void SaveGoals()
-    {
-
-    }
-
-    public void LoadGoals()
-    {
-
-    }
+    public void LoadGoals() { }
 }
