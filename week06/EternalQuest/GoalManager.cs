@@ -47,10 +47,11 @@ public class GoalManager
                 case "4":
                     Console.Clear();
                     LoadGoals();
+                    Console.Clear();
                     break;
                 case "5":
                     Console.Clear();
-
+                    RecordEvent();
                     break;
                 case "6":
                     _isRunning = false;
@@ -67,9 +68,12 @@ public class GoalManager
 
     public void ListGoalNames()
     {
-        Console.WriteLine("1. Simple Goal");
-        Console.WriteLine("2. Eternal Goal");
-        Console.WriteLine("3. Checklist Goal\n");
+      int counter = 1;
+      foreach (Goal goal in _goals)
+      {
+        Console.WriteLine($"{counter}. {goal.GetName()}");
+        counter++;
+      }
     }
 
     public void ListGoalDetails()
@@ -142,7 +146,9 @@ public class GoalManager
     public void CreateGoal()
     {
         Console.WriteLine("The types of Goals are:");
-        ListGoalNames();
+        Console.WriteLine("1. Simple Goal");
+        Console.WriteLine("2. Eternal Goal");
+        Console.WriteLine("3. Checklist Goal\n");
 
         Console.Write("Which type of goal would you like to create? ");
         string typeOfGoal = Console.ReadLine();
@@ -188,7 +194,21 @@ public class GoalManager
         }
     }
 
-    public void RecordEvent() { }
+    public void RecordEvent() 
+    {
+      ListGoalNames();
+      
+      Console.Write("Which goal did you accomplish? ");
+      
+      int goalAccomplished = int.Parse(Console.ReadLine());
+      Goal currentGoal = _goals[goalAccomplished-1];
+
+      currentGoal.RecordEvent();
+     
+        _score += int.Parse(currentGoal.GetPoints());
+
+      Console.WriteLine($"You now have {_score}\n");
+    }
 
     public void SaveGoals()
     {
@@ -264,9 +284,9 @@ public class GoalManager
                     string checklistName = dataParts[0];
                     string checklistDescription = dataParts[1];
                     string checklistPoints = dataParts[2];
-                    int bonusPoints = int.Parse(dataParts[3]);
+                    int completedCount = int.Parse(dataParts[3]);
                     int targetCount = int.Parse(dataParts[4]);
-                    int completedCount = int.Parse(dataParts[5]);
+                    int bonusPoints = int.Parse(dataParts[5]);
 
                     ChecklistGoal checklistGoal = new ChecklistGoal(
                         checklistName,

@@ -9,9 +9,46 @@ public class ChecklistGoal : Goal
     {
         _target = target;
         _bonus = bonus;
+        _amountCompleted = 0;
     }
 
-    public override void RecordEvent() { }
+    public int GetBonus()
+    {
+      return _bonus;
+    }
+
+    public void SetAmountCompleted()
+    {
+      _amountCompleted++;
+    }
+
+    public string GetChecklistPoints()
+    {
+      return _points;
+    }
+
+    public string GetPoints()
+    {   
+      string totalPoints;
+      if (IsComplete())
+      {
+        int tempPoints = GetBonus() + int.Parse(GetChecklistPoints());
+        totalPoints = tempPoints.ToString();
+      }
+      else
+      {
+          totalPoints = GetChecklistPoints();
+      }
+        return totalPoints;
+    }
+
+    public override void RecordEvent() 
+    {
+      SetAmountCompleted();
+      GetPoints();  
+        Console.WriteLine($"Congratulations you have earned {GetPoints()}");
+      Console.WriteLine($"Congratulations you accomplished the {GetName()} goal!");
+    }
 
     public override bool IsComplete()
     {

@@ -1,3 +1,4 @@
-SimpleGoal:Frist goal,This is a simple goal,100,False
-EternalGoal:Second goal,This is an eternal goal,200
-ChecklistGoal:Third goal,This is a checklist goal,300,0,4,50
+0
+SimpleGoal:Go to church,go visit the church,100,False
+EternalGoal:Study scriptures,read the book,200
+ChecklistGoal:Read some talks,We need to read a few talks,300,0,3,400
