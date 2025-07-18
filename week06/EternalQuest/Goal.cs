@@ -13,14 +13,13 @@ public abstract class Goal
 
     public string GetName()
     {
-      return _shortName;
+        return _shortName;
     }
 
     public virtual string GetPoints()
     {
-      return _points;
+        return _points;
     }
-
 
     public abstract void RecordEvent();
 

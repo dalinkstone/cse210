@@ -68,12 +68,12 @@ public class GoalManager
 
     public void ListGoalNames()
     {
-      int counter = 1;
-      foreach (Goal goal in _goals)
-      {
-        Console.WriteLine($"{counter}. {goal.GetName()}");
-        counter++;
-      }
+        int counter = 1;
+        foreach (Goal goal in _goals)
+        {
+            Console.WriteLine($"{counter}. {goal.GetName()}");
+            counter++;
+        }
     }
 
     public void ListGoalDetails()
@@ -194,20 +194,20 @@ public class GoalManager
         }
     }
 
-    public void RecordEvent() 
+    public void RecordEvent()
     {
-      ListGoalNames();
-      
-      Console.Write("Which goal did you accomplish? ");
-      
-      int goalAccomplished = int.Parse(Console.ReadLine());
-      Goal currentGoal = _goals[goalAccomplished-1];
+        ListGoalNames();
 
-      currentGoal.RecordEvent();
-     
+        Console.Write("Which goal did you accomplish? ");
+
+        int goalAccomplished = int.Parse(Console.ReadLine());
+        Goal currentGoal = _goals[goalAccomplished - 1];
+
+        currentGoal.RecordEvent();
+
         _score += int.Parse(currentGoal.GetPoints());
 
-      Console.WriteLine($"You now have {_score}\n");
+        Console.WriteLine($"You now have {_score}\n");
     }
 
     public void SaveGoals()

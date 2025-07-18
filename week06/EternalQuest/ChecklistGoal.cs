@@ -14,40 +14,40 @@ public class ChecklistGoal : Goal
 
     public int GetBonus()
     {
-      return _bonus;
+        return _bonus;
     }
 
     public void SetAmountCompleted()
     {
-      _amountCompleted++;
+        _amountCompleted++;
     }
 
     public string GetChecklistPoints()
     {
-      return _points;
+        return _points;
     }
 
     public string GetPoints()
-    {   
-      string totalPoints;
-      if (IsComplete())
-      {
-        int tempPoints = GetBonus() + int.Parse(GetChecklistPoints());
-        totalPoints = tempPoints.ToString();
-      }
-      else
-      {
-          totalPoints = GetChecklistPoints();
-      }
+    {
+        string totalPoints;
+        if (IsComplete())
+        {
+            int tempPoints = GetBonus() + int.Parse(GetChecklistPoints());
+            totalPoints = tempPoints.ToString();
+        }
+        else
+        {
+            totalPoints = GetChecklistPoints();
+        }
         return totalPoints;
     }
 
-    public override void RecordEvent() 
+    public override void RecordEvent()
     {
-      SetAmountCompleted();
-      GetPoints();  
+        SetAmountCompleted();
+        GetPoints();
         Console.WriteLine($"Congratulations you have earned {GetPoints()}");
-      Console.WriteLine($"Congratulations you accomplished the {GetName()} goal!");
+        Console.WriteLine($"Congratulations you accomplished the {GetName()} goal!");
     }
 
     public override bool IsComplete()
