@@ -1,0 +1,3 @@
+SimpleGoal:Frist goal,This is a simple goal,100,False
+EternalGoal:Second goal,This is an eternal goal,200
+ChecklistGoal:Third goal,This is a checklist goal,300,0,4,50
